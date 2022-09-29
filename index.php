@@ -66,10 +66,12 @@ class Game
         echo <<<EOT
 
         Game over.
+        {$this->player_1->name}: {$this->player_1->coins}
+        {$this->player_2->name}: {$this->player_2->coin}
 
         Winner: {$this->winner()->name}
 
-        Flips: $this->flips;
+        Flips: $this->flips
 
 
         EOT;
