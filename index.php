@@ -16,6 +16,7 @@ class Game
 {
     protected $player_1;
     protected $player_2;
+    protected $fplips = 1;
 
     public function __construct(Player $player_1, Player $player_2)
     {
@@ -44,6 +45,7 @@ class Game
             if ($this->player_1->coins == 0 || $this->player_2->coins == 0) {
                 return $this->end();
             }
+            $this->flips++;
         }
     }
 
