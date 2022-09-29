@@ -16,7 +16,7 @@ class Game
 {
     protected $player_1;
     protected $player_2;
-    protected $fplips = 1;
+    protected $flips = 1;
 
     public function __construct(Player $player_1, Player $player_2)
     {
@@ -64,8 +64,13 @@ class Game
         // победитель тот, у кого больше монет.
 
         echo <<<EOT
+
         Game over.
+
         Winner: {$this->winner()->name}
+
+        Flips: $this->flips;
+
 
         EOT;
     }
