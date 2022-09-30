@@ -75,11 +75,7 @@ class Game
 
     public function winner()
     {
-        if ($this->player_1->bank() > $this->player_2->bank()) {
-            return $this->player_1;
-        } else {
-            return $this->player_2;
-        }
+        return $this->player_1->bank() > $this->player_2->bank() ? $this->player_1 : $this->player_2;
     }
 
     // метод окончания игры
