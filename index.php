@@ -51,8 +51,8 @@ class Game
     public function start()
     {
         //chance to win %
-        $player_1Chance = $this->player_1->bank() / ($this->player_1->bank() + $this->player_2->bank()) * 100 . '%';
-        $player_2Chance = $this->player_2->bank() / ($this->player_2->bank() + $this->player_1->bank()) * 100 . '%';
+        $player_1Chance = round(num:$this->player_1->bank() / ($this->player_1->bank() + $this->player_2->bank()), precision:2) * 100 . '%';
+        $player_2Chance = round(num:$this->player_2->bank() / ($this->player_2->bank() + $this->player_1->bank()), precision:2) * 100 . '%';
 
         echo <<<EOT
 
@@ -119,8 +119,8 @@ class Game
 }
 
 $game = new Game(
-    new Player("Ksenia", 100),
-    new Player("Sergei", 100)
+    new Player("Ksenia", 1000),
+    new Player("Sergei", 150)
 );
 
 $game->start();
