@@ -16,6 +16,11 @@ class Player
         $this->coins++;
         $player->coins--;
     }
+
+    public function bankrupt()
+    {
+        return $this->coins == 0;
+    }
 }
 
 class Game
@@ -51,12 +56,12 @@ class Game
 
             } else {
 
-                $this->player_1->point($this->player_1);
+                $this->player_2->point($this->player_1);
 
             }
 
             // если у кого-то кол-во монет будет 0, то игра закончена.
-            if ($this->player_1->coins == 0 || $this->player_2->coins == 0) {
+            if ($this->player_1->bankrupt() || $this->player_2->bankrupt()) {
                 return $this->end();
             }
             $this->flips++;
