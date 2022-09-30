@@ -50,6 +50,24 @@ class Game
 
     public function start()
     {
+        //chance to win %
+        $player_1Chance = $this->player_1->bank() / ($this->player_1->bank() + $this->player_2->bank()) * 100 . '%';
+        $player_2Chance = $this->player_2->bank() / ($this->player_2->bank() + $this->player_1->bank()) * 100 . '%';
+
+        echo <<<EOT
+
+        Game start!
+
+        Chance to win {$this->player_1->name}: $player_1Chance
+        Chance to win {$this->player_2->name}: $player_2Chance
+
+        EOT;
+
+        $this->play();
+    }
+
+    public function play()
+    {
         while (true) {
 
             // если орел, п1 получает монету, п2 теряет
@@ -89,7 +107,9 @@ class Game
         {$this->player_1->name}: {$this->player_1->bank()}
         {$this->player_2->name}: {$this->player_2->bank()}
 
-        Winner: {$this->winner()->name}
+        ______________
+        Winner! : {$this->winner()->name}
+        ______________
 
         Flips: $this->flips
 
