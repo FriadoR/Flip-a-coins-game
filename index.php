@@ -107,9 +107,9 @@ class Game
         {$this->player_1->name}: {$this->player_1->bank()}
         {$this->player_2->name}: {$this->player_2->bank()}
 
-        ______________
+        ________________
         Winner! : {$this->winner()->name}
-        ______________
+        ________________
 
         Flips: $this->flips
 
