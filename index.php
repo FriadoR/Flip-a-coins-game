@@ -21,6 +21,11 @@ class Player
     {
         return $this->coins == 0;
     }
+
+    public function bank()
+    {
+        return $this->coins;
+    }
 }
 
 class Game
@@ -70,7 +75,7 @@ class Game
 
     public function winner()
     {
-        if ($this->player_1->coins > $this->player_2->coins) {
+        if ($this->player_1->bank() > $this->player_2->bank()) {
             return $this->player_1;
         } else {
             return $this->player_2;
