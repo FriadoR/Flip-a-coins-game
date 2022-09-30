@@ -10,6 +10,12 @@ class Player
         $this->name = $name;
         $this->coins = $coins;
     }
+
+    public function point(Player $player)
+    {
+        $this->coins++;
+        $player->coins--;
+    }
 }
 
 class Game
@@ -40,11 +46,13 @@ class Game
             // если решка, п1 теряет монету, п2 получает
 
             if ($this->flip() == "орел") {
-                $this->player_1->coins++;
-                $this->player_2->coins--;
+
+                $this->player_1->point($this->player_2);
+
             } else {
-                $this->player_1->coins--;
-                $this->player_2->coins++;
+
+                $this->player_1->point($this->player_1);
+
             }
 
             // если у кого-то кол-во монет будет 0, то игра закончена.
