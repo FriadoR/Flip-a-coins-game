@@ -67,7 +67,7 @@ class Game
 
         Game over.
         {$this->player_1->name}: {$this->player_1->coins}
-        {$this->player_2->name}: {$this->player_2->coin}
+        {$this->player_2->name}: {$this->player_2->coins}
 
         Winner: {$this->winner()->name}
 
