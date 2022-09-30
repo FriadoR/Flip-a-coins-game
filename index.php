@@ -73,7 +73,7 @@ class Game
         }
     }
 
-    public function winner()
+    public function winner(): Player
     {
         return $this->player_1->bank() > $this->player_2->bank() ? $this->player_1 : $this->player_2;
     }
@@ -86,8 +86,8 @@ class Game
         echo <<<EOT
 
         Game over.
-        {$this->player_1->name}: {$this->player_1->coins}
-        {$this->player_2->name}: {$this->player_2->coins}
+        {$this->player_1->name}: {$this->player_1->bank()}
+        {$this->player_2->name}: {$this->player_2->bank()}
 
         Winner: {$this->winner()->name}
 
