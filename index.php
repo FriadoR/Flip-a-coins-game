@@ -26,6 +26,14 @@ class Player
     {
         return $this->coins;
     }
+
+    //chance to win %
+
+    public function oods(Player $player)
+    {
+        return round(num:$this->bank() / ($this->bank() + $player->bank()), precision:2) * 100 . '%';
+
+    }
 }
 
 class Game
@@ -40,7 +48,7 @@ class Game
         $this->player_2 = $player_2;
     }
 
-    // подбросить монету
+    // flip coin
 
     public function flip()
     {
@@ -50,16 +58,13 @@ class Game
 
     public function start()
     {
-        //chance to win %
-        $player_1Chance = round(num:$this->player_1->bank() / ($this->player_1->bank() + $this->player_2->bank()), precision:2) * 100 . '%';
-        $player_2Chance = round(num:$this->player_2->bank() / ($this->player_2->bank() + $this->player_1->bank()), precision:2) * 100 . '%';
 
         echo <<<EOT
 
         Game start!
 
-        Chance to win {$this->player_1->name}: $player_1Chance
-        Chance to win {$this->player_2->name}: $player_2Chance
+        Chance to win {$this->player_1->name}: {$this->player_1->oods($this->player_2)}
+        Chance to win {$this->player_2->name}: {$this->player_2->oods($this->player_1)}
 
         EOT;
 
