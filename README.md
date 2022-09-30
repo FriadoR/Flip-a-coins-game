@@ -2,4 +2,5 @@
 _________________________________________________
 # 100 coins have Player 1 and Player 2. Who win?!
 _________________________________________________
-<img width="403" alt="Снимок экрана 2022-09-30 в 08 51 36" src="https://user-images.githubusercontent.com/103481753/193199823-b055aab4-6ce3-4702-8f3d-6519bf7d7eae.png">
+
+<img width="323" alt="Снимок экрана 2022-09-30 в 10 17 04" src="https://user-images.githubusercontent.com/103481753/193213384-a4b5719c-836d-4d13-a912-8d845b7083e4.png">
