@@ -24,16 +24,22 @@ class Game
         $this->player_2 = $player_2;
     }
 
+    // подбросить монету
+
+    public function flip()
+    {
+
+        return rand(0, 1) ? "орел" : "решка";
+    }
+
     public function start()
     {
         while (true) {
 
-            // подбросить монету
-            $flip = rand(0, 1) ? "орел" : "решка";
-
             // если орел, п1 получает монету, п2 теряет
             // если решка, п1 теряет монету, п2 получает
-            if ($flip == "орел") {
+
+            if ($this->flip() == "орел") {
                 $this->player_1->coins++;
                 $this->player_2->coins--;
             } else {
