@@ -1,4 +1,4 @@
-# Flip-a-coins-game (PHP project mini game)     
+# Flip-a-coins-game (PHP project mini game)  
 _________________________________________________
 # 100 coins have Player 1 and Player 2. Who win?!
 _________________________________________________
