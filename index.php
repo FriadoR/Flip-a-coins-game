@@ -15,6 +15,7 @@ class Player
     {
         $this->coins++;
         $player->coins--;
+        
     }
 
     public function bankrupt()
