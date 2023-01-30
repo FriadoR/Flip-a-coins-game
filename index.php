@@ -15,7 +15,7 @@ class Player
     {
         $this->coins++;
         $player->coins--;
-        
+
     }
 
     public function bankrupt()
@@ -125,8 +125,8 @@ class Game
 }
 
 $game = new Game(
-    new Player("Ksenia", 1000),
-    new Player("Sergei", 150)
+    new Player("Ksenia", 10),
+    new Player("Sergei", 10)
 );
 
 $game->start();
